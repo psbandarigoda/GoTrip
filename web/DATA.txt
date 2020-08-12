@@ -1,0 +1,52 @@
+INSERT INTO `package`(`id`, `pacName`, `pacDetails`, `pacPrice`, `pacImage`, `pacDays`, `pacLoaction`, `pacAvailability`) 
+VALUES (0,'Galle One Day','Galle Foart, Jungle beach, Rumassala Japan Tempe',200,'assets/img/service/services1.jpg','1','Galle',10);
+INSERT INTO `package`(`id`, `pacName`, `pacDetails`, `pacPrice`, `pacImage`, `pacDays`, `pacLoaction`, `pacAvailability`) 
+VALUES (0,'Galle Two Day','Galle Foart, Jungle beach, Hikkaduwa, Seenigama, Diving',300,'assets/img/service/services2.jpg','2','Galle',10);
+
+
+INSERT INTO `user_type`(`id`, `type`) VALUES (0,'user');
+INSERT INTO `user_type`(`id`, `type`) VALUES (0,'vehicle_owner');
+INSERT INTO `user_type`(`id`, `type`) VALUES (0,'admin');
+
+
+INSERT INTO `vehicle_type`(`id`, `type`, `availability`) VALUES (0,'scooty',0);
+INSERT INTO `vehicle_type`(`id`, `type`, `availability`) VALUES (0,'off road',0);
+INSERT INTO `vehicle_type`(`id`, `type`, `availability`) VALUES (0,'tuk tuk',0);
+INSERT INTO `vehicle_type`(`id`, `type`, `availability`) VALUES (0,'mini car',0);
+INSERT INTO `vehicle_type`(`id`, `type`, `availability`) VALUES (0,'premier car',0);
+INSERT INTO `vehicle_type`(`id`, `type`, `availability`) VALUES (0,'luxury car',0);
+INSERT INTO `vehicle_type`(`id`, `type`, `availability`) VALUES (0,'mini van',0);
+INSERT INTO `vehicle_type`(`id`, `type`, `availability`) VALUES (0,'luxury van',0);
+INSERT INTO `vehicle_type`(`id`, `type`, `availability`) VALUES (0,'luxury bus',0);
+
+
+INSERT INTO `vehicle_owner`(`id`, `userType`, `fName`, `lName`, `email`, `address`, `phone`, `password`) 
+VALUES (0,2,'pasindu','sandaruwan','pasindu@gmail.com','baddegama','0773638654','123');
+INSERT INTO `vehicle_owner`(`id`, `userType`, `fName`, `lName`, `email`, `address`, `phone`, `password`) 
+VALUES (0,2,'isuri','sandamini','isuri@gmail.com','baddegama','0763638654','321');
+
+
+INSERT INTO `vehicle`(`id`, `vType`, `vOwner`, `vRegNo`, `vColour`) 
+VALUES (0,1,2,'ACB-0201','black');
+INSERT INTO `vehicle`(`id`, `vType`, `vOwner`, `vRegNo`, `vColour`) 
+VALUES (0,2,2,'AAA-8205','black');
+INSERT INTO `vehicle`(`id`, `vType`, `vOwner`, `vRegNo`, `vColour`) 
+VALUES (0,3,2,'ACD-2203','red');
+
+
+INSERT INTO `user`(`id`, `userType`, `fName`, `lName`, `email`, `address`, `phone`, `password`) 
+VALUES (0,1,'kaushi','athukorala','kaushi@gmail.com','Wekunugoda,Galle','0776358942','456');
+INSERT INTO `user`(`id`, `userType`, `fName`, `lName`, `email`, `address`, `phone`, `password`) 
+VALUES (0,1,'bodini','athukorala','bodini@gmail.com','Wekunugoda,Galle','0762539542','654');
+
+
+INSERT INTO `admin`(`id`, `userType`, `fName`, `lName`, `email`, `address`, `phone`, `password`) 
+VALUES (0,3,'ps','bandarigoda','ps@gmail.com','egodahawaththa, hikkaduwa','0776358592','123');
+INSERT INTO `admin`(`id`, `userType`, `fName`, `lName`, `email`, `address`, `phone`, `password`) 
+VALUES (0,3,'Ashmila','Shehani','ashmila@gmail.com','weligama, matara','0715558592','123');
+
+
+INSERT INTO `booked_vehicle`(`id`, `vehicle`, `user`, `startDate`, `days`) VALUES (0,1,2,'23-07-2020',2);
+
+
+INSERT INTO `booked_package`(`id`, `package`, `user`, `startDate`) VALUES (0,1,2,'23-07-2020');
